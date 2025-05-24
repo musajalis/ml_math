@@ -25,7 +25,7 @@ int* sample_matrix_generator(int width, int height) {
 	return arr;
 }
 
-int* flat_matrix_multiplication(int mat1[], int mat2[], int mat1_width, int mat1_height, int mat2_width, int mat2_height) {
+int* matrix_multiplication(int mat1[], int mat2[], int mat1_width, int mat1_height, int mat2_width, int mat2_height) {
 	if (mat1_width != mat2_height) {
 		return 0;
 	}
@@ -74,7 +74,7 @@ int main() {
     	printf("\nOriginal Matrix 2 (%dx%d):\n", mat2_height, mat2_width);
     	print_matrix(mat2, mat2_height, mat2_width);
 	
-	int* result = flat_matrix_multiplication(mat1, mat2, mat1_width, mat1_height, mat2_width, mat2_height);
+	int* result = matrix_multiplication(mat1, mat2, mat1_width, mat1_height, mat2_width, mat2_height);
 	printf("\nResultant matrix memory address: %p\n", result);
 
     	if (!result) {
